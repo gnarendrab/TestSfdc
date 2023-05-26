@@ -1,4 +1,4 @@
-public class AccController {
+public without sharing class AccController {
     
     @auraEnabled
     public static List<Account> getAllAccounts()
