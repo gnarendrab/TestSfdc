@@ -1,0 +1,22 @@
+<apex:page controller="cal" >
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection title="Calutor">
+    <apex:outputText >Enter value1</apex:outputText>
+    <apex:inputText value="{!a}" />
+    <apex:outputText >Enter value2</apex:outputText>
+    <apex:inputText value="{!b}" />
+    <apex:outputText >result..{!res}</apex:outputText>
+</apex:pageBlockSection>    
+ 
+ <apex:pageBlockSection title="Action Section..">
+        <apex:commandButton value="Add + " action="{!ma}"/>
+    	<apex:commandButton value="Sub - " action="{!ms}"/>
+        <apex:commandButton value="Mul * " action="{!mm}"/>
+        <apex:commandButton value="Div / " action="{!md}"/>
+ </apex:pageBlockSection>
+
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

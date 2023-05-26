@@ -1,0 +1,12 @@
+<apex:page standardController="Account" id="accPage">
+  <apex:form id="accform" >
+      <apex:inputText id="accName"/>
+      <apex:commandButton value="Test" onclick="testFunction('{!$Component.accName}'); "/>
+  </apex:form>
+  <script>
+  function testFunction(acc){
+      var acct =document.getElementById(acc).value
+      alert('the value is'+ acct);
+  }
+  </script>
+</apex:page>

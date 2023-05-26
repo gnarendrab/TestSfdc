@@ -1,0 +1,12 @@
+<aura:component >
+<!--Define attributes -->
+    <aura:attribute name="msg" type="String" default="GM" />
+    Welcome to   component !!!!!!!!
+    <!-- Accessing attribute value 
+     {! } ->Curly bang
+      v notation -> view port or value port
+      {!v.NameOf the attribute}
+example :{!v.msg}
+-->
+    {!v.msg} Welcome to Lightning!!!
+</aura:component>

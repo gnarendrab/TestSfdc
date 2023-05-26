@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable">
+    <lightning:tabset variant="scoped">
+        <lightning:tab label="Calc">
+        <c:Calucator ></c:Calucator>
+        </lightning:tab>
+        <lightning:tab label="Opportunity">
+        <c:OppCmp ></c:OppCmp>
+        </lightning:tab>
+        <lightning:tab label="Accounts">
+        <c:AccountCmp ></c:AccountCmp>
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

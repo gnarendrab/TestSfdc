@@ -1,0 +1,9 @@
+<aura:component >
+	
+    <!--Define handler for SignalJump Event using aura:handler -->
+    <aura:handler name="signalJump"
+                  event="c:SignalJumpEvent"
+                  action="{!c.handleEvent}"/>
+    <!-- Refer notifier Component -->
+    <c:SignalJumpEventNotifier />
+</aura:component>

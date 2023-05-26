@@ -1,0 +1,13 @@
+<aura:component >
+	   <lightning:layout >
+       <lightning:layoutItem size="2">
+           <lightning:icon iconName="custom:custom9" size="large" alternativeText="Indicates approval"/>
+        </lightning:layoutItem>
+       <lightning:layoutItem size="8">
+       <c:OppCmp />
+       </lightning:layoutItem>
+       <lightning:layoutItem size="2">
+       <c:MenuEx ></c:MenuEx>
+       </lightning:layoutItem>
+       </lightning:layout>
+</aura:component>

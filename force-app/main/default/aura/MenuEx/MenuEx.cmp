@@ -1,0 +1,12 @@
+<aura:component >
+    <!-- Define aura:dependency for ModalDialog so that framework can link
+       this component and create instance in the first go only -->
+    <aura:dependency resource="c:ModalExample"/>
+	<lightning:buttonMenu iconName="utility:threedots" alternativeText="Settings" onselect="{! c.handleMenuSelect }">
+    <lightning:menuItem label="View" value="View"     iconName="utility:preview"/>
+    <lightning:menuItem label="Edit" value="Edit"     iconName="utility:edit"/>
+    <lightning:menuItem label="Delete" value="Delete" iconName="utility:delete"/>
+</lightning:buttonMenu>
+    <div aura:Id="modalDiv">
+    </div>
+</aura:component>

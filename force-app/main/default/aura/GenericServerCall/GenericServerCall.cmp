@@ -1,0 +1,6 @@
+<aura:component abstract="true">
+	<!-- Refer body attribute so that all child components can inherit
+         this body and add their own customizations  -->
+    {! v.body}
+    
+</aura:component>

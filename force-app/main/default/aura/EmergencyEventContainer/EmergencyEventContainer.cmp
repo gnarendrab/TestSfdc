@@ -1,0 +1,6 @@
+<aura:component >
+    <c:EmergencyComponent />
+    <!--Handlers-->
+    <c:EmergencyEvtHandler />
+    
+</aura:component>

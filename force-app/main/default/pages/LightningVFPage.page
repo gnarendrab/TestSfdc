@@ -1,0 +1,30 @@
+<apex:page >
+    <!--1.Make VF Page Compatible with Lightning Frame work by including lightning -->
+    <apex:includeLightning />
+    <!--2. Represent a place holder to place instance of Lightning component, Probably a div tag  -->
+    
+    <div id="lc"/>
+    <div id="lc1"/>
+    
+    
+    <!--3. Load Lightning Application using $Lightning.use() function arguments 
+           1.Name of the application along  with namespace 
+           2.Javascript function -->
+    
+    <!--4. Create instance of lightning Component using 
+           $Lightning.createComponent() function arguments 
+           1.Name of the Lightning Component with namespace 
+           2.attribute, if any ,in JSON format and if there are no attributes represent {}
+           3. Place holder id which is refered in step 2
+           4. Optional JavaScript function 
+     -->
+    
+    <script>
+      $Lightning.use("c:Dummy1",function(){
+      alert("App loaded Successfully....");
+          $Lightning.createComponent("c:calucator",{"one":45,"two":75},"lc");
+          $Lightning.createComponent("c:OppCmp",{},"lc1");
+      });   
+    </script>
+
+</apex:page>

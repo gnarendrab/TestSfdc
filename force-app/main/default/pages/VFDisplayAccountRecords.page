@@ -1,0 +1,42 @@
+<apex:page controller="AccountRetervial">
+<apex:form >
+<apex:pageBlock >
+    
+<apex:pageBlockSection title="Entry Section...">
+    <apex:outputText value="Enter Account Name..."></apex:outputText>
+    <apex:inputText value="{!aname}"/>
+   <apex:commandButton value="Submit.." action="{!m1}"/> 
+</apex:pageBlockSection>
+   
+    
+<apex:pageBlockSection title="List of Account Records...">
+    <apex:pageBlockTable value="{!accrecs}" var="item">
+        <apex:column value="{!item.id}"/>
+    	<apex:column value="{!item.name}"/>
+        <apex:column value="{!item.phone}"/>
+        <apex:column value="{!item.billingcity}"/>
+    </apex:pageBlockTable>
+</apex:pageBlockSection>
+    
+<apex:pageBlockSection title="List of lead Records...">
+    <apex:pageBlockTable value="{!leadrecs}" var="item">
+        <apex:column value="{!item.id}"/>
+    	<apex:column value="{!item.firstname}"/>
+        <apex:column value="{!item.company}"/>
+        <apex:column value="{!item.city}"/>
+   </apex:pageBlockTable>
+</apex:pageBlockSection>
+    
+<apex:pageBlockSection title="List of Employee Records...">
+    <apex:pageBlockTable value="{!emprecs}" var="item">
+    	<apex:column value="{!item.Name}"/>
+    	<apex:column value="{!item.FirstName__c}"/>
+        <apex:column value="{!item.Desg__c}"/>
+        <apex:column value="{!item.Salary__c}"/>
+    </apex:pageBlockTable>
+ </apex:pageBlockSection>
+ 
+  <apex:pageMessages ></apex:pageMessages>
+</apex:pageBlock>
+</apex:form>    
+</apex:page>

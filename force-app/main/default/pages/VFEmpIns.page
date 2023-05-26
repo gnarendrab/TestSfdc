@@ -1,0 +1,19 @@
+<apex:page standardController="EMP__c">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection title="Insert Employee Records...">
+    <apex:inputField value="{!EMP__c.FirstName__c}"/>
+    <apex:inputField value="{!EMP__c.Desg__c}"/>
+    <apex:inputField value="{!EMP__c.Salary__c}"/>
+</apex:pageBlockSection>    
+
+<apex:pageBlockButtons location="bottom" >
+    	<apex:commandButton value="Save.." action="{!save}"/>
+        <apex:commandButton value="Quick Save.." action="{!quicksave}"/>	
+</apex:pageBlockButtons>
+
+
+    
+</apex:pageBlock> 
+    </apex:form>
+</apex:page>

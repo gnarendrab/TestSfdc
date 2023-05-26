@@ -1,0 +1,32 @@
+<apex:page id="loginpage">
+    
+     <script>
+  function testFunction(uid){
+      var u =document.getElementById(uid).value
+      alert('the value is'+ u);
+      
+      if(u=='')
+          {
+          alert('the value is empty');
+          }
+  }
+  </script>
+   
+    <apex:form id="frm" >
+    <apex:pageBlock title="Block1">    
+     <apex:pageBlockSection title="UserDetails" >
+     <apex:outputText >Enter UserID</apex:outputText>
+     <apex:inputText id="uid"/>
+         
+     <apex:outputText >Enter Password</apex:outputText>
+     <apex:inputText maxlength="18"/>
+         <apex:commandButton value="Submit..." onclick="testFunction('{!$Component.uid}')"/>
+     <apex:commandButton value="Cancel..."/>
+     
+    </apex:pageBlockSection>
+    
+            
+    </apex:pageBlock>
+    </apex:form>
+         
+</apex:page>

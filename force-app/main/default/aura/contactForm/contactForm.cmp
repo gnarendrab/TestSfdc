@@ -1,0 +1,18 @@
+<aura:component controller="ContactController"
+                extends="c:GenericServerCall">
+    <!--Define an attribute of type contact -->
+    <aura:attribute name="con" type="contact" default="{'sObjectType':'Contact'}"/>
+    <!-- define a string attriute to display status -->
+    <aura:attribute name="status" type="String" default="Draft"/>
+    <div class="slds-box slds-theme_success" align="center">Contact Form</div>
+    <div>{! v.status}</div>
+    <!--Fetch FirstName,LastName and  -->
+    <lightning:input label="FirstName" value="{!v.con.FirstName}"
+                     maxlength="5" minlength="2" messageWhenBadInput="Cannot ..."/>
+    <lightning:input label="LastName" value="{!v.con.LastName}" onchange="{!c.validateLastName}"/>
+    <lightning:input label="Email" value="{!v.con.Email}"/>
+    <lightning:button label="Save" iconName="utility:save" onclick="{!c.save}" 
+                      disabled="true" aura:Id="btn"/>
+    
+	
+</aura:component>

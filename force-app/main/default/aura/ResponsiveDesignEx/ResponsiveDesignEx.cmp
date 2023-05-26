@@ -1,0 +1,5 @@
+<aura:component >
+	<div>
+    <p>Resize the browser hwhen the widtg of the document</p>
+    </div>
+</aura:component>

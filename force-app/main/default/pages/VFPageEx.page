@@ -1,0 +1,19 @@
+<apex:page >
+    <apex:form >
+    <apex:pageBlock title="Block1">    
+     <apex:pageBlockSection title="UserDetails" >
+     <apex:outputText >Enter UserID</apex:outputText>
+     <apex:inputText lang="English"/>
+         
+     <apex:outputText >Enter Password</apex:outputText>
+     <apex:inputText maxlength="18"/>
+    </apex:pageBlockSection>
+    
+     <apex:pageBlockButtons location="bottom">
+     <apex:commandButton value="Submit..."/>
+     <apex:commandButton value="Cancel..."/>
+     </apex:pageBlockButtons>
+        
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

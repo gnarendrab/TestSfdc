@@ -1,0 +1,22 @@
+<aura:component Controller="FetchOppRecords">
+	<!-- Define a List attribute to store opportunities list -->
+    <aura:attribute name="oppList" type="List" />
+    <aura:attribute name="wonList" type="List" />
+    <lightning:button label="Get All Ops" onclick="{!c.getAllOps}" />
+    <lightning:button label="Get Won OPS" onclick="{!c.getWonOps}"/>
+    <aura:iteration items="{!v.oppList}" var="opty">
+    <tr>
+    <td>{!opty.Name}</td>
+    <td>{!opty.StageName}</td>
+    <td>{!opty.Amount}</td>
+    </tr>
+    </aura:iteration>
+   <aura:iteration items="{!v.wonList}" var="won">
+    <tr>
+    <td>{!won.Name}</td>
+    <td>{!won.StageName}</td>
+    <td>{!won.Amount}</td>
+    </tr>
+    </aura:iteration>
+    
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" >
+	<p>Hey Iam coming from Aura</p>
+    <c:lwcMyfirstComponent/>
+</aura:component>

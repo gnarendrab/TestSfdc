@@ -1,0 +1,15 @@
+.THIS {
+}
+
+.THIS.divBgColor {
+
+    background-color : lightblue;
+}
+
+@media only screen and (max-width : 1000px) {
+    .THIS.divBgColor {
+
+    background-color : red;
+}
+    
+}

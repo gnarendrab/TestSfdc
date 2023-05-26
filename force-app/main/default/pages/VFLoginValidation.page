@@ -1,0 +1,26 @@
+<!-- Validating UID and Pwd using apex -->
+<!-- Validating Uid and Pwd with apex -->
+<apex:page controller="loginValidation" sidebar="false" tabStyle="contact" showHeader="false">
+<apex:form >
+<apex:pageBlock >
+<apex:pageMessages ></apex:pageMessages>
+<apex:pageBlockSection title="Entry Section..">
+    <apex:outputText value="Enter Uid ..."></apex:outputText>
+    <apex:inputText value="{!uid}"/>
+ 
+    <apex:outputText value="Enter Password..."></apex:outputText>
+    <apex:inputText value="{!pwd}"/>
+</apex:pageBlockSection>
+    
+<apex:pageBlockSection title="Result Section...">
+    <apex:outputText value="Result...{!res}"></apex:outputText>
+</apex:pageBlockSection>    
+    
+<apex:pageBlockButtons >
+    <apex:commandButton value="Submit.." action="{!m1}"/>
+    <apex:commandButton value="Clear All " action="{!mc}"/>
+</apex:pageBlockButtons>
+    
+</apex:pageBlock>
+</apex:form>    
+</apex:page>

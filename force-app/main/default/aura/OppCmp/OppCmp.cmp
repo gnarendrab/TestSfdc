@@ -1,0 +1,48 @@
+<aura:component Controller="FetchOppRecords" extends="c:GenericServerCall"
+                implements="force:appHostable,flexipage:availableForAllPageTypes">
+	<!--Define aura:method for controller.js function
+       so that this function can be called from other controller.js functions 
+     -->
+    <aura:method name="display" action="{!c.displayToast}"/>
+    <!--Define aura handlers for aura:waitning and aura:doneWaiting -->
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"></aura:handler>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"></aura:handler>
+    <lightning:spinner variant="brand" size="large" class="slds-hide"/>
+    <!-- Define a List attribute to store opportunities list -->
+    <aura:attribute name="oppList" type="List" />
+    <aura:attribute name="wonList" type="List" />
+    <lightning:button label="Get All Ops" onclick="{!c.getAllOps}" />
+    <lightning:button label="Get Won OPS" onclick="{!c.getWonOps}"/>
+    
+    <table class="slds-table slds-table_bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Stage</th>
+            <th>Amount</th>
+         </tr>
+        </thead>
+        <tbody>
+    <aura:iteration items="{!v.oppList}" var="opty">
+   <c:GenericCardDisplay attr1="{!opty.Name}"
+                          attr2="{!opty.StageName}"
+    attr3="{!opty.Amount}" 
+                         sid="{!opty.Id}"/> 
+  
+    <!-- <tr>
+    <td>{!opty.Name}</td>
+    <td>{!opty.StageName}</td>
+    <td>{!opty.Amount}</td>
+    </tr>    -->        
+    </aura:iteration>
+    </tbody>
+    </table>
+   <aura:iteration items="{!v.wonList}" var="won">
+    <tr>
+    <td>{!won.Name}</td>
+    <td>{!won.StageName}</td>
+    <td>{!won.Amount}</td>
+    </tr>
+    </aura:iteration>
+    
+</aura:component>

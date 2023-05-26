@@ -1,0 +1,48 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="FilesListApexController" >
+ 
+    <aura:attribute name="recordId" type="String" description="Record to which the files should be attached" />
+    <aura:attribute name="searchText" type="String" default=""/>
+    <aura:attribute name="QuoteRecord" type="Quote"/>
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="error" type="String" /> 
+    <aura:attribute name="ContVersion" type="ContentVersion[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.handleContentDocument}"/> 
+    <aura:attribute name="prefixURL" type="String" default="/sfc/servlet.shepherd/version/download/"/>
+    
+    <div>
+    <lightning:fileUpload label="Add attachment"   
+                          multiple="true"      
+                          accept=".pdf, .png, .docx, .xlsx" 
+                          recordId="{!v.recordId}"    
+                          onuploadfinished="{!c.handleUploadFinished}"  
+                          />
+        
+    </div>
+    
+<div class="slds-form-element slds-lookup" data-select="single">
+
+      <div class="slds-form-element__control">
+
+        <div class="slds-input-has-icon slds-input-has-icon--right">
+
+          <lightning:buttonIcon iconName="utility:search" variant="bare" onclick="{! c.handleClick }" alternativeText="Search" class="slds-input__icon" />
+
+          <ui:inputText value="{!v.searchText}" class="slds-lookup__search-input slds-input" placeholder="Search" />
+        </div>
+
+      </div>
+
+    </div>
+    
+
+<div class="slds-p-left_medium slds-p-right_medium" aura:id="main">
+        <ul class="slds-list_vertical slds-has-dividers_top-space">
+            <aura:iteration items="{!v.ContVersion}" var="item" indexVar="i">
+			 <div aura:id="{!item.Id}" class="slds-page-header data-row"  onclick="{!c.showDetail}" data-id="{!item.Id}" data-name="{!item.Title}">
+              {!item.Title }   
+            </div>
+            </aura:iteration>
+        </ul>
+</div>
+ 
+</aura:component>

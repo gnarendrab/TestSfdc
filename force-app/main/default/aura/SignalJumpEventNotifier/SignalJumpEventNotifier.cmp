@@ -1,0 +1,11 @@
+<aura:component >
+<!--Register with the event using aura:registerEvent 
+    value of name attribute plays vital role -->
+    <aura:registerEvent name="signalJump"
+                        type="c:SignalJumpEvent"/>
+    
+    <!--Perform user event via a button,Notifier will inform handler via a button click -->
+    <lightning:button label="Inform Handler"
+                      onclick="{!c.informHandler}"/>
+    
+</aura:component>

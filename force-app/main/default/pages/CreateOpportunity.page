@@ -1,0 +1,19 @@
+<apex:page standardController="Lead" extensions="CreateOpportunityController">
+    <apex:form >
+        <apex:actionFunction name="populateopportunityFieldsMethod" action="{!populateopportunityFieldsMethod}"/>
+    
+    <script>
+      
+   
+            if(window.confirm("Create Opprortunity "))
+            {
+               window.setTimeout(populateopportunityFieldsMethod,200);
+            }
+            else
+            {
+              window.location.replace('/{!currentRecord.Id}');
+            }
+                 
+    </script>
+    </apex:form>
+</apex:page>

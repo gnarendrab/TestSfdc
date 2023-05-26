@@ -1,0 +1,47 @@
+<aura:component >
+    <aura:attribute name="title" type="String" default="Calculator"/> 
+    <aura:attribute name="one" type="Integer" default="1" />
+    <aura:attribute name="two" type="Integer" default="2" />
+    <aura:attribute name="res" type="Integer"/>
+    
+    <div class="slds-modal slds-fade-in-open slds-backdrop">
+        <div class ="slds-modal__container">
+            
+        <div class ="slds-modal__header">
+            <lightning:buttonIcon iconName="utility:close" 
+                              alternativeText="close" 
+                              class="slds-modal__close" 
+                              variant="bare-inverse"
+                              size="large"
+                              onclick="{!c.closeModal}"/>
+            <img src="{! $Resource.calc}" class="image" />
+            {!v.title}
+        
+        </div>
+        <div class ="slds-modal__content">
+            <lightning:input label="First Number"
+                     value="{! v.one}"
+                     class="inputWidth"/>
+            <lightning:input label="second Number" 
+                     value="{! v.two}"
+                     class="inputWidth"/>
+    
+         <div>
+          result is :{! v.res}
+         </div>
+    
+        </div>
+        <div class ="slds-modal__footer">
+            
+        <lightning:button label="Addition" variant="brand" 
+                          iconName="utility:add"
+                          onclick="{!c.add}"/>
+        <lightning:button label="Multiplication" variant="brand" 
+                          iconName="utility:forward"
+                          onclick="{!c.mul}"/>
+        </div>
+        
+        </div>
+                      
+      </div>
+</aura:component>

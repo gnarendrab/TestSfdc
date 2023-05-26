@@ -1,0 +1,32 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+	<aura:attribute name="one" type="Integer" default="1" />
+    <aura:attribute name="two" type="Integer" default="2" />
+    <aura:attribute name="res" type="Integer"/>
+    {!v.one + v.two} <br/>
+    {!v.one * v.two} <br/>
+    <div class="divBorder">
+    <!-- Insert Calulator image using $Resource global value Provider -->
+    <img src="{! $Resource.calc}" />
+    
+    <!-- take user input via lightning:input -->
+    <lightning:input label="First Number"
+                     value="{! v.one}"
+                     class="inputWidth"/>
+    <lightning:input label="second Number" 
+                     value="{! v.two}"
+                     class="inputWidth"/>
+    
+    <div>
+    result is :{! v.res}
+    </div>
+    
+    <!--call controller.js function using  {!c.NameOfthefunction}
+          where c stands for controller -->
+
+    <lightning:button label="Addition" variant="base" 
+                      iconName="utility:add"
+                      onclick="{!c.add}"/>
+    <lightning:button label="Multiplication"/>
+    
+    </div>
+</aura:component>

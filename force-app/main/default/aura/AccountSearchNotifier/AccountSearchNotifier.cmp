@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="searchText" type="String"/>
+<!--Register with the event using aura:registerEvent 
+    value of name attribute plays vital role -->
+    <aura:registerEvent name="AccountSearchEvent"
+                        type="c:AccountSearchEvent"/>
+    
+    <!--Perform user event via a button,Notifier will inform handler via a button click -->
+    <lightning:input label="AccSearch" value="{!v.searchText}"/>
+    <lightning:button label="Search "
+                      onclick="{!c.accountSearch}"
+                      />
+    
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes" description="Sample Component">
+    <forceChatter:publisher context="GLOBAL" />
+    <forceChatter:feed type="News" />
+</aura:component>

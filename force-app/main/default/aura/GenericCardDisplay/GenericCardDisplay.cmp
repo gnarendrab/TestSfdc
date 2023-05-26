@@ -1,0 +1,27 @@
+<aura:component >
+	<!-- define generic attributes -->
+    <aura:attribute name="attr1" type="String"/>
+    <aura:attribute name="attr2" type="String"/>
+    <aura:attribute name="attr3" type="String"/>
+    <aura:attribute name="sid" type="String"/>
+    
+    <lightning:card iconName="action:dial_in">
+    <aura:set attribute="title">
+        {!v.attr1}
+        </aura:set>
+        <aura:set attribute="body">
+            {!v.attr2}
+            {!v.sid}
+        </aura:set>
+        <aura:set attribute="footer">
+            {!v.attr3}
+            
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:button label="View"  onclick="{!c.displayRecord}"/>
+            <lightning:button label="Edit" onclick="{!c.editRecord}" />
+        </aura:set>
+
+    </lightning:card>
+
+</aura:component>

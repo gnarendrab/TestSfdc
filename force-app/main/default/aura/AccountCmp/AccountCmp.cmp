@@ -1,0 +1,22 @@
+<aura:component Controller="AccController" extends="c:GenericServerCall" implements="flexipage:availableForAllPageTypes">
+	<!-- Define a List attribute to store opportunities list -->
+    <aura:attribute name="accList" type="List" />
+    <aura:attribute name="accdirList" type="List" />
+    <lightning:button label="Get All Accs" onclick="{!c.getAllAccs}" />
+    <lightning:button label="Get Won OPS" onclick="{!c.getDirAccs}"/>
+    <aura:iteration items="{!v.accList}" var="acc">
+    <tr>
+    <td>{!acc.Name}</td>
+    <td>{!acc.Type}</td>
+    <td>{!acc.Phone}</td>
+    </tr>
+    </aura:iteration>
+   <aura:iteration items="{!v.accdirList}" var="dir">
+    <tr>
+    <td>{!acc.Name}</td>
+    <td>{!acc.Type}</td>
+    <td>{!acc.Phone}</td>
+    </tr>
+    </aura:iteration>
+    
+</aura:component>

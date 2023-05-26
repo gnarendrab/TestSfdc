@@ -1,0 +1,12 @@
+<aura:component >
+
+    <!-- Register with event
+          name attribute is mandatory so we give value 
+         but it has no role to play-->	
+    <aura:registerEvent name="dummy" type="c:EmergencyEvent"/>
+    <!--Display a button -->
+    <lightning:button label="Dial 911"
+                      onclick="{!c.dial911}" />
+                  
+
+</aura:component>

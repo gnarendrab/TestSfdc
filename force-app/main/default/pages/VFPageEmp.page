@@ -1,0 +1,15 @@
+<apex:page standardController="EMP__c" recordSetVar="emprecs">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection title="List of Employee Records...">
+    <apex:pageBlockTable value="{!emprecs}" var="item">
+    	<apex:column value="{!item.Name}"/>
+    	<apex:column value="{!item.FirstName__c}"/>
+        <apex:column value="{!item.Desg__c}"/>
+        <apex:column value="{!item.Salary__c}"/>
+    </apex:pageBlockTable>
+ </apex:pageBlockSection>    
+    
+</apex:pageBlock> 
+    </apex:form>
+</apex:page>
